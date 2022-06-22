@@ -41,16 +41,48 @@ Route::post('user-submit',[CrudController::class,'user_submit'])->name('user-sub
 
 Route::get('user-deleted/{id}',[CrudController::class,'user_delete'])->name('user-deleted'); 
 
+//relation ship routes
+ Route::get('/posts', function (){
+    //  $tag =\App\Tag::first();
+     $blog =\App\blog::with('tags')->first();
+$blog->tags()->attach([1,2,3] );
+    //  \App\Tag::create([
+    //      'name'=>'laravel',
+    //      'price'=>'No 1'
+    //  ]);
+    //  \App\Tag::create([
+    //     'name'=>'Vuejs',
+    //     'price'=>'No 1'
+    // ]);
+    // \App\Tag::create([
+    //     'name'=>'Php',
+    //     'price'=>'No 1'
+    // ]);
+    // \App\Tag::create([
+    //     'name'=>'Javascript',
+    //     'price'=>'No 1'
+    // ]);
+//     \App\Post::create([
+//         'user_id' =>1,
+//         'title' =>'Post Title 1'
+//     ]);
+//     \App\Post::create([
+//         'user_id' =>2,
+//         'title' =>'Post Title 1'
+//     ]);
+ });
+
+
 
 //Auth Routes
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 
 // Validation Routes
 Route::get('validation',[laravelTopicsController::class,'validation_form']);

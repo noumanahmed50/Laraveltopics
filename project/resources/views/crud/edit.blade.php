@@ -6,17 +6,7 @@
       @csrf
       <input type="hidden" name="id" value="{{$data['id']}}">
 <section class="section">
-          <div class="section-header">
-            <div class="row">
-              <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                <div class="section-header-breadcrumb-content">
-                  <h1>User Information</h1>
-                  
-                </div>
-              </div>
-              
-            </div>
-          </div>
+         
           <div class="section-body">
             <div class="row">
               <div class="col-12">
@@ -33,6 +23,8 @@
                             <th>User Name</th>
                             <th>Email</th>
                             <th>Contact</th>
+                            <th>Image</th>
+
                           </tr>
                         </thead>
                         <tbody>
@@ -41,8 +33,12 @@
                             <td><input type="text" name="name" value="{{$data['name']}}"></td>
                             <td><input type="text" name="email"  value="{{$data['email']}}"></td>
                             <td><input type="text" name="phone" value="{{$data['phone']}}"></td>
+                            <td><input type="file" name="image" value="{{$data['image']}}"></td>
+
                           </tr>
-                          
+                          <tr>
+
+                          </tr>
                         
                       </table>
                       <tfoot>

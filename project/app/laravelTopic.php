@@ -26,7 +26,7 @@ class laravelTopic extends Model
         return $this->attributes["topic_dis"] =  "It is used to ".$value;
     }
 
-    //relations one to one ,one to many ka b same hna 
+    //  ka b same hna 
     // function table1Name($value){
     //     return $this->hasOne('App\model2name');
     // }
